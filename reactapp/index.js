@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, Link, IndexRoute, hashHistory, browserHistory} from 'react-router';
-import App from './app.jsx';
+import { BrowserRouter, Route, IndexRoute } from 'react-router';
 import Home from './home.jsx';
+import Another from './another.jsx';
+import App from './app.jsx';
+
+// More components
+
 
 
 ReactDOM.render(
-  <Router path={typeof to === 'object' ? to.pathname : to}
-  children={({ location, match }) => {
-    const isActive = !!(getIsActive ? getIsActive(match, location) : match) }} history={browserHistory}>
-    <Route path='/' component={App}>
-      <IndexRoute component={Home} />
-      <Route path='home' component={Home} />
-
-    </Route>
-  </Router>,
-  document.getElementById('app')
-);
+	<BrowserRouter >
+			<Route  component={App} >
+		      	<Route path="/another" component={Another} />
+			 	<Route path="/home" component={Home} />
+			</Route>
+	</BrowserRouter >, document.getElementById('app')
+)

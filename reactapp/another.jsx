@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import Another from './another.jsx';
+
+import Home from './home.jsx';
 import App from './app.jsx';
 
-class Home extends React.Component {
+class Another extends React.Component {
    render() {
       return (
       <div>
@@ -13,4 +14,4 @@ class Home extends React.Component {
    }
 }
 
-export default Home;
+export default Another;
