@@ -1,15 +1,12 @@
 var config = {
    entry: './reactapp/index.js',
+   
 
    output: {
       path:'./public/javascripts/',
       filename: 'app.js',
    },
 
-   devServer: {
-      inline: true,
-      port: 8080
-   },
 
    module: {
       loaders: [
@@ -21,9 +18,11 @@ var config = {
             query: {
                presets: ['es2015', 'react']
             }
+         	
          }
       ]
-   }
+   },
+   
 }
 
 module.exports = config;
