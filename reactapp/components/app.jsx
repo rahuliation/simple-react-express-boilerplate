@@ -1,9 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom';
-import { Route, Link } from 'react-router-redux';
-import Home from './home.jsx' ;
-import Another from './another.jsx';
-
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
+import Todos from './todos.jsx'
+import Home from './home.jsx'
 
 
 class App extends React.Component {
@@ -15,8 +13,8 @@ class App extends React.Component {
     	       <li><Link to="/home">Home</Link></li>
     	       <li><Link to="/another">Another</Link></li>
     	     </ul>
-    	     <Route path="/home" component={Home}/>
-      		 <Route path="/another" component={Another}/>
+        <Route path="/todos" component={Todos} />
+        <Route path="/home" component={Home} />
          </div>
 
       );
