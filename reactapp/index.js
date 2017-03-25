@@ -14,8 +14,7 @@ import reducers from './reducers/reducers' // Or wherever you keep your reducers
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory()
 
-import Another from './components/another.jsx'
-import Home from './components/home.jsx'
+
 import App from './components/app.jsx'
 // Build the middleware for intercepting and dispatching navigation actions
 const middleware = routerMiddleware(history)
@@ -35,7 +34,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    { /* ConnectedRouter will use the store from Provider automatically */ }
+
     <ConnectedRouter history={history}>
       <App/>
     </ConnectedRouter>

@@ -1,39 +1,42 @@
-const todo = (state = {}, action) => {
-  switch (action.type) {
-    case 'ADD_TODO':
-      return {
-        id: action.id,
-        text: action.text,
-        completed: false
-      }
-    case 'TOGGLE_TODO':
-      if (state.id !== action.id) {
-        return state
-      }
 
-      return Object.assign({}, state, {
-        completed: !state.completed
-      })
 
-    default:
-      return state
+
+const todolist={
+  last_id: 3,
+  list: [
+  {
+    id: 1,
+    task: "task 1"       
+  },
+  {
+    id: 2,
+    task: "task 2"       
   }
+  
+  ]
 }
 
-const todos = (state = [], action) => {
+
+
+const todos = (state = todolist, action) => {
+   
+   console.log(state);
   switch (action.type) {
-    case 'ADD_TODO':
-      return [
-        ...state,
-        todo(undefined, action)
-      ]
-    case 'TOGGLE_TODO':
-      return state.map(t =>
-        todo(t, action)
-      )
-    default:
-      return state
+    case 'ADD_TODO': 
+    {
+     var new_state={...state };
+    new_state.list.push({
+      id:new_state.last_id++,
+      task: action.task
+    })
+
+    return new_state ;
+    }
+  
+    
+  
   }
+   return state
 }
 
-export default todos
+export default {todos}

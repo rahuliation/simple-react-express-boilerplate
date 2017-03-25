@@ -11,7 +11,7 @@ class App extends React.Component {
     		  <ul>
     	       <li className="omuk"><Link to="/">wowo</Link></li>
     	       <li><Link to="/home">Home</Link></li>
-    	       <li><Link to="/another">Another</Link></li>
+    	       <li><Link to="/todos">Todos</Link></li>
     	     </ul>
         <Route path="/todos" component={Todos} />
         <Route path="/home" component={Home} />
