@@ -26,7 +26,7 @@ const todos = (state = todolist, action) => {
     {
      var new_state={...state };
     new_state.list.push({
-      id:new_state.last_id++,
+      id: new_state.last_id++,
       task: action.task
     })
 
