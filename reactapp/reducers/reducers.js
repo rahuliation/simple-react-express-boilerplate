@@ -1,6 +1,3 @@
-
-
-
 const todolist={
   last_id: 3,
   list: [
